@@ -1,7 +1,7 @@
 {
   "name": "realm-create",
   "description": "Helper that creates a reference to a different code execution realm",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/bevacqua/realm-create",
   "author": {
     "name": "Nicolas Bevacqua",
