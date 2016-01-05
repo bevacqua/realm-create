@@ -1,0 +1,28 @@
+{
+  "name": "realm-create",
+  "description": "Helper that creates a reference to a different code execution realm",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bevacqua/realm-create",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "hello@ponyfoo.com",
+    "url": "https://ponyfoo.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/realm-create.git"
+  },
+  "main": "./src/node.js",
+  "browser": "./src/browser.js",
+  "scripts": {
+    "build": "jshint . && browserify -s realm-create -do dist/realm-create.js . && uglifyjs -m -c -o dist/realm-create.min.js dist/realm-create.js",
+    "deploy": "npm run build && npm version ${BUMP:-\"patch\"} && npm publish && git push && git push --tags"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "browserify": "12.0.1",
+    "jshint": "2.8.0",
+    "uglify-js": "2.6.1"
+  }
+}
